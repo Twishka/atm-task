@@ -7,8 +7,8 @@ url = 'http://localhost:5000/atm/api/money'
 
 class ATMTest(unittest.TestCase) :
 	def setUp(self):
-		global app
-		app = Flask(__name__)
+		global app					# ?
+		app = Flask(__name__)		# do not create here, load only config
 		self.app_context = app.app_context()
 	   	self.app_context.push()
 
